@@ -2,8 +2,21 @@ import React from 'react';
 
 const Header = () => {
     return (
-        <div className='text-6xl text-black font-bold'>
-            This is the Header
+        <div className='flex flex-col w-full bg-black sticky shadow-sm shadow-black'>
+            <nav className='flex items-center justify-between w-full p-4 lg:px-40 bg-black text-white'>
+                <img className='w-28' src="./src/assets/logo.png" alt="" />
+                <ul className='flex items-center justify-center gap-4 lg:gap-8 text-lg text-white'>
+                    <li><a href="/">Shop</a></li>
+                    <li><a href="/">Order Review</a></li>
+                    <li><a href="/">Inventory</a></li>
+                </ul>
+            </nav>
+
+            {/* Search bar */}
+            <div className="flex items-center gap-4 w-full h-full p-4 lg:px-40 bg-[#111111]">
+                <input className='w-full outline-none border-none px-1' placeholder='What are you looking for?' spellCheck="false" type="text" />
+                <img src="./src/assets/cart.svg" alt="" />
+            </div>
         </div>
     );
 };
