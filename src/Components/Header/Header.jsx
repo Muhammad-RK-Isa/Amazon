@@ -10,10 +10,17 @@ const Header = () => {
 
         switch (lastScrollY < window.scrollY) {
             case true:
-                header.classList.add('-top-[74.175px]')
+                switch (header.classList.contains('top-0')) {
+                    case true:
+                        header.classList.replace('top-0','-top-[74.175px]')
+                        break;
+                    case false:
+                        header.classList.add('-top-[74.175px]')
+                        break;
+                }
                 break;
-                
-                case false:
+
+            case false:
                 header.classList.replace('-top-[74.175px]', 'top-0')
                 break;
         };
@@ -24,7 +31,7 @@ const Header = () => {
 
 
     return (
-        <header id='header' className='flex flex-col w-full bg-black  sticky shadow-sm shadow-black transition-all'>
+        <header id='header' className='flex flex-col w-full bg-black sticky shadow-sm shadow-black transition-all'>
             <nav className='flex items-center justify-between w-full p-4 lg:px-40 bg-black text-white'>
                 <img className='w-28' src={logo} alt="" />
                 <ul className='flex items-center justify-center gap-4 lg:gap-8 lg:text-lg text-white'>
