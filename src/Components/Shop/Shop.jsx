@@ -10,9 +10,9 @@ const Shop = () => {
     const [products, setProducts] = useState(productsData);
 
     return (
-        <div className='grid lg:grid-cols-5 gap-8'>
+        <div className='grid lg:grid-cols-5 gap-2 lg:gap-4'>
             {
-                products.map(product => <Product uniqueID = {product.asin} product = {product} />)
+                products.map(product => <Product key = {product.asin} product = {product} />)
             }
         </div>
     );
