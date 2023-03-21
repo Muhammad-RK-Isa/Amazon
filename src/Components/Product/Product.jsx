@@ -2,7 +2,17 @@ import React from 'react';
 import Stars from './../Stars/Stars';
 
 const Product = (props) => {
-    const { title, stars, thumbnailImage, reviewsCount } = props.product;
+
+    const { title, stars, thumbnailImage, reviewsCount, price, listPrice } = props.product;
+
+    const discountPrice = () => {
+        const array = price.value.toString().split('.');
+        return (
+            <><span className='text-sm relative top-[3px]'>{price.currency}</span>{array[0]} <span className='text-sm relative top-[2px]'>{array[1] ? array[1] : '00' }</span></>
+        )
+    }
+
+    const friedPrice = discountPrice();
 
     return (
         <div className='lg:col-start-2 lg:col-span-3 grid grid-cols-5 lg:grid-cols-4 gap-2 border rounded-sm mx-2'>
@@ -19,6 +29,10 @@ const Product = (props) => {
                             <h3 className='font-extralight'>({reviewsCount.toLocaleString('en-US')})</h3>
                         </div> : ''
                 }
+                <div className="flex items-end gap-2">
+                    <p className='flex justify-center text-2xl font-semibold'>{ (friedPrice) }</p>
+                    <p className='text-sm flex items-center gap-1 text-gray-700'>{listPrice ?<><span className='hidden lg:block'>List:</span> <strike>{listPrice.currency + listPrice.value}</strike></> : ''}</p>
+                </div>
 
             </div>
 
