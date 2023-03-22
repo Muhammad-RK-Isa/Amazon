@@ -50,7 +50,7 @@ const Header = () => {
             {/* Search bar */}
             <div className="flex items-center gap-4 w-full h-full p-4 lg:px-40 bg-[#111111]">
                 <input id='search-box' className='w-full outline-none border-none px-1' placeholder='What are you looking for?' spellCheck="false" type="text" />
-                <img src={cartIcon} alt="" />
+                <img className='w-8' src={cartIcon} alt="" />
             </div>
         </header>
     );

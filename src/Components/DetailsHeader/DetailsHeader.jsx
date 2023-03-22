@@ -4,7 +4,7 @@ import Stars from './../Stars/Stars';
 const DetailsHeader = ( props ) => {
     const { title, brand, stars, reviewsCount, answeredQuestions } = props.product;
     return (
-        <div className='lg:col-start-2 lg:col-span-2 flex flex-col lg:flex-col-reverse text-sm text-black'>
+        <div className='lg:col-start-3 lg:col-span-3 flex flex-col lg:flex-col-reverse text-sm text-black'>
             <div className="flex lg:flex-col lg:items-start  justify-between">
                 <p title='No data available for now' className='text-cyan-600 cursor-pointer hover:text-red-700 hover:underline-offset-1 hover:underline'>Vist the { brand } store</p>
                 <div className="flex items-center justify-center gap-1 lg:gap-2">
@@ -18,7 +18,7 @@ const DetailsHeader = ( props ) => {
                     </div>
                 </div>
             </div>
-            <h3 className='text-gray-700'>{ title }</h3>
+            <h3 className='text-gray-700 lg:text-2xl'>{ title }</h3>
         </div>
     );
 };
