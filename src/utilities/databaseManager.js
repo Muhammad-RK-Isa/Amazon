@@ -12,7 +12,7 @@ const getUser = () => {
 
 const getDataKey = () => {
     const userId = getUser();
-    return `emaJohn/carts/${userId}`
+    return `amazon/carts/${userId}`
 }
 
 // push to local storage: a temporary place for database
@@ -40,22 +40,3 @@ const clearLocalShoppingCart = (cart) => {
 
 
 export { addToDatabaseCart, getDatabaseCart, removeFromDatabaseCart, clearLocalShoppingCart};
-
-
-// polyfill to support older browser
-const localStorage = window.localStorage || (() => {
-  let store = {}
-  return {
-    getItem(key) {
-      return store[key]
-    },
-    setItem(key, value) {
-      store[key] = value.toString()
-    },
-    clear() {
-      store = {}
-    }
-  };
-})()
-
-// end of poly fill

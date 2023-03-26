@@ -15,7 +15,6 @@ const Product = (props) => {
 
     const friedPrice = discountPrice();
 
-
     return (
         <div className='lg:col-start-2 lg:col-span-3 grid grid-cols-5 lg:grid-cols-4 gap-2 border rounded-sm mx-2'>
 

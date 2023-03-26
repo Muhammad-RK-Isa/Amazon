@@ -5,6 +5,7 @@ const DetailsHeader = ( props ) => {
     const { title, brand, stars, reviewsCount, answeredQuestions } = props.product;
     return (
         <div className='lg:col-start-3 lg:col-span-3 flex flex-col lg:flex-col-reverse text-sm text-black'>
+            <hr className='border-gray-400 hidden lg:block'/>
             <div className="flex lg:flex-col lg:items-start  justify-between">
                 <p title='No data available for now' className='text-cyan-600 cursor-pointer hover:text-red-700 hover:underline-offset-1 hover:underline'>Vist the { brand } store</p>
                 <div className="flex items-center justify-center gap-1 lg:gap-2">
