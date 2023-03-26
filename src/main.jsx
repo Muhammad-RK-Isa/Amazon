@@ -12,11 +12,11 @@ import Cart from './Components/Cart/Cart';
 
 ReactDOM.createRoot( document.getElementById( 'root' ) ).render(
   <BrowserRouter>
-    <Header />
+    <Header/>
     <ScrollToTop />
     <Routes>
       <Route path='/' element={ <Shop /> }></Route>
-      <Route path='/:asinQuery' element={ <ProductDetails /> }></Route>
+      <Route path='/:asinQuery' element={ <ProductDetails/> }></Route>
       <Route path='/cart' element={ <Cart /> }></Route>
     </Routes>
   </BrowserRouter>,

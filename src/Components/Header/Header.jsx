@@ -36,7 +36,6 @@ const Header = () => {
     } );
 
 
-
     return (
         <header id='header' className='flex flex-col w-full bg-black sticky shadow-sm shadow-black transition-all z-50'>
             <nav className='flex items-center justify-between w-full p-4 lg:px-40 bg-black text-white'>
